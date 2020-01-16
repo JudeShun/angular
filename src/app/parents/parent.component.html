@@ -1,0 +1,24 @@
+<div class="card">
+    <br><br>
+    <p>Fill up the Form</p>
+    <br>
+    <p>Firstname: <input type="text" [(ngModel)]="new" /></p>
+    <p>Lastname: <input type="text" [(ngModel)]="lData" /></p>
+    <p>Enrolled? <input type="checkbox" [(ngModel)]="eData"></p>
+    <p>Gender <select [(ngModel)]="gData">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select></p>
+    <button (click)=onClick()>Submit</button>
+    <p *ngIf="notif">Notification: {{notif}}</p>
+
+    <h1>List of Declined Datas!</h1>
+    <ul>
+        <li *ngFor=" let each of students">
+            <p>Name: {{each.fname}} <br>Lastname:{{each.lname}} <br> Enroll:{{each.status}} <br> Gender:{{each.gender}}</p>
+        </li>
+    </ul>
+
+</div>
+<app-child (declined)="students=$event" (Submit)="notif=$event" [parentData]="pdata" [lData]=ldata [eData]="edata"
+    [gData]="gdata"></app-child>

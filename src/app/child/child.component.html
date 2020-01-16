@@ -1,0 +1,22 @@
+<div class="card">
+    <br><br>
+    <form>
+        <p>Personal Information<br>
+
+            <br>Firstname: {{new}}<br>
+            <br>Lastname: {{lData}} <br>
+            <br>Enrolled?: {{eData}} <br>
+            <br>Gender: {{gData}} </p>
+        <button (click)="onClickApprove()">Approved!</button>
+        <button (click)="onClickDecline()">Declined!</button>
+
+        <h1>List of Approved Data!</h1>
+
+        <ul>
+            <li *ngFor=" let each of student">
+                <p>Firstname: {{each.fname}} <br>Lastname:{{each.lname}} <br> Enroll:{{each.status}} <br>
+                    Gender:{{each.gender}}</p>
+            </li>
+        </ul>
+    </form>
+</div>

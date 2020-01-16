@@ -1,0 +1,15 @@
+<div>
+    
+<p class="one">{{title}}</p>
+
+<button class="two" [class.active]="IsActive">This is a Class Bindings!</button>
+<br><br>
+
+<button class="three" [style.background]="IsActive ? 'green' : 'orange'">This is a Style Bindings!</button>
+<br><br>
+
+<button (click)="onClick()">Click Me!</button>
+<br><br>
+
+<img [src]="image" />
+</div>

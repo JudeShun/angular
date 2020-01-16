@@ -1,0 +1,11 @@
+.one{
+    font-size:30px;
+    color:violet;
+}
+.two{
+    color: aqua;
+    font-size:30px;
+}
+.active{
+    background: black;
+}
