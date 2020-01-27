@@ -7,22 +7,30 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 // import { ManualComponent} from './manual/manual';
 import { ExternalComponent } from './external/external.component';
 import { ChildComponent } from './child/child.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { ParentComponent } from './parents/parent.component';
+import { DatadrivenComponent } from './datadriven/datadriven.component';
+import { TemplateComponent } from './template/template.component';
+import { RegistrationComponent } from './registration/registration.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    // ManualComponent,
     ExternalComponent,
     ChildComponent,
-    ParentComponent
+    ParentComponent,
+    DatadrivenComponent,
+    TemplateComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
